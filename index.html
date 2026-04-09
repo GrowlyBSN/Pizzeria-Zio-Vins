@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Da Zio Vins – Pizzeria Napoletana a Casalecchio di Reno</title>
+  <meta name="description" content="Pizzeria Da Zio Vins a Casalecchio di Reno. Pizza napoletana autentica, forno a legna, impasto con 30% integrale e lievitazione 48 ore. Via Giovanni Cimabue 1/2." />
+  <meta property="og:title" content="Da Zio Vins – Pizzeria Napoletana a Casalecchio di Reno" />
+  <meta property="og:description" content="Pizza napoletana. Forno a legna. Impasto integrale 48 ore. Casalecchio di Reno (BO)." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:url" content="https://daziovina.it/" />
+  <meta name="theme-color" content="#C41E24" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Da Zio Vins",
+    "description": "Pizzeria napoletana con forno a legna, impasto integrale e lievitazione 48 ore a Casalecchio di Reno.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Giovanni Cimabue 1/2",
+      "addressLocality": "Casalecchio di Reno",
+      "postalCode": "40033",
+      "addressRegion": "BO",
+      "addressCountry": "IT"
+    },
+    "telephone": "+390510707131",
+    "url": "https://daziovina.it",
+    "servesCuisine": "Pizza Napoletana",
+    "priceRange": "EUR",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "12:00",
+        "closes": "14:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "18:00",
+        "closes": "22:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "18:00",
+        "closes": "22:30"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════════ -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Da Zio <span>Vins</span></a>
+    <div class="nav-links">
+      <a href="menu.html">Menu</a>
+      <a href="#impasto">L'Impasto</a>
+      <a href="#chi-siamo">Chi Siamo</a>
+      <a href="#dove-siamo">Dove Siamo</a>
+      <a href="contatti.html">Contatti</a>
+      <a href="tel:0510707131" class="nav-cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 011.09 2.18 2 2 0 013.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+        </svg>
+        0510707131
+      </a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Apri menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <a href="menu.html">Menu</a>
+  <a href="#impasto">L'Impasto</a>
+  <a href="#chi-siamo">Chi Siamo</a>
+  <a href="#dove-siamo">Dove Siamo</a>
+  <a href="contatti.html">Contatti</a>
+  <a href="tel:0510707131" class="nav-cta">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 011.09 2.18 2 2 0 013.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+    </svg>
+    0510707131
+  </a>
+</div>
+
+<!-- ══ HERO ══════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-grain"></div>
+
+  <div class="hero-scene">
+    <!-- FORNO A LEGNA SVG -->
+    <div class="oven-wrap" id="oven-wrap">
+      <svg class="oven-svg" viewBox="0 0 700 560" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <radialGradient id="innerGlow" cx="50%" cy="55%" r="50%">
+            <stop offset="0%"   stop-color="#FF8C00" stop-opacity="1"/>
+            <stop offset="40%"  stop-color="#C41E24" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#0d0808"  stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="glowTop" cx="50%" cy="40%" r="50%">
+            <stop offset="0%"   stop-color="#FF6B00" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#0d0808"  stop-opacity="0"/>
+          </radialGradient>
+          <filter id="glowFilter" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="10" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <filter id="flameGlow">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Gambe del forno -->
+        <rect x="140" y="490" width="40" height="65" rx="6" fill="#1e1e1e"/>
+        <rect x="520" y="490" width="40" height="65" rx="6" fill="#1e1e1e"/>
+
+        <!-- Corpo principale forno -->
+        <rect x="70" y="290" width="560" height="230" rx="12" fill="#252525"/>
+
+        <!-- Dettagli pietra orizzontali sul corpo -->
+        <line x1="90"  y1="320" x2="610" y2="320" stroke="#333" stroke-width="1.5"/>
+        <line x1="90"  y1="355" x2="610" y2="355" stroke="#333" stroke-width="1.5"/>
+        <line x1="90"  y1="390" x2="610" y2="390" stroke="#333" stroke-width="1.5"/>
+        <line x1="90"  y1="425" x2="610" y2="425" stroke="#333" stroke-width="1.5"/>
+        <line x1="90"  y1="460" x2="610" y2="460" stroke="#333" stroke-width="1.5"/>
+
+        <!-- Dettagli pietra verticali sfalsati -->
+        <line x1="190" y1="320" x2="190" y2="355" stroke="#333" stroke-width="1"/>
+        <line x1="310" y1="355" x2="310" y2="390" stroke="#333" stroke-width="1"/>
+        <line x1="430" y1="320" x2="430" y2="355" stroke="#333" stroke-width="1"/>
+        <line x1="250" y1="390" x2="250" y2="425" stroke="#333" stroke-width="1"/>
+        <line x1="490" y1="390" x2="490" y2="425" stroke="#333" stroke-width="1"/>
+        <line x1="180" y1="460" x2="180" y2="490" stroke="#333" stroke-width="1"/>
+        <line x1="370" y1="460" x2="370" y2="490" stroke="#333" stroke-width="1"/>
+        <line x1="560" y1="460" x2="560" y2="490" stroke="#333" stroke-width="1"/>
+
+        <!-- Cupola/Dome del forno -->
+        <path d="M100,292 Q100,80 350,80 Q600,80 600,292 Z" fill="#252525"/>
+
+        <!-- Dettaglio oro bordo cupola esterno -->
+        <path d="M100,292 Q100,80 350,80 Q600,80 600,292" fill="none" stroke="#D4A847" stroke-width="3" opacity="0.8"/>
+
+        <!-- Fasce pietra cupola -->
+        <path d="M118,292 Q118,100 350,100 Q582,100 582,292" fill="none" stroke="#333" stroke-width="1.5"/>
+        <path d="M138,292 Q138,120 350,120 Q562,120 562,292" fill="none" stroke="#2e2e2e" stroke-width="1"/>
+        <path d="M160,292 Q160,140 350,140 Q540,140 540,292" fill="none" stroke="#2e2e2e" stroke-width="1"/>
+
+        <!-- Decorazione mosaico attorno all'arco -->
+        <rect x="96"  y="186" width="8" height="8" rx="1" fill="#D4A847" opacity="0.7" transform="rotate(45 100 190)"/>
+        <rect x="116" y="148" width="8" height="8" rx="1" fill="#D4A847" opacity="0.6" transform="rotate(45 120 152)"/>
+        <rect x="145" y="118" width="7" height="7" rx="1" fill="#C41E24" opacity="0.7" transform="rotate(45 148 121)"/>
+        <rect x="182" y="96"  width="7" height="7" rx="1" fill="#D4A847" opacity="0.6" transform="rotate(45 185 99)"/>
+        <rect x="224" y="83"  width="8" height="8" rx="1" fill="#D4A847" opacity="0.7" transform="rotate(45 228 87)"/>
+        <rect x="270" y="76"  width="7" height="7" rx="1" fill="#C41E24" opacity="0.6" transform="rotate(45 273 79)"/>
+        <rect x="318" y="74"  width="8" height="8" rx="1" fill="#D4A847" opacity="0.7" transform="rotate(45 322 78)"/>
+        <rect x="366" y="76"  width="7" height="7" rx="1" fill="#D4A847" opacity="0.6" transform="rotate(45 369 79)"/>
+        <rect x="412" y="83"  width="8" height="8" rx="1" fill="#C41E24" opacity="0.7" transform="rotate(45 416 87)"/>
+        <rect x="454" y="96"  width="7" height="7" rx="1" fill="#D4A847" opacity="0.6" transform="rotate(45 457 99)"/>
+        <rect x="491" y="118" width="7" height="7" rx="1" fill="#D4A847" opacity="0.7" transform="rotate(45 494 121)"/>
+        <rect x="521" y="148" width="8" height="8" rx="1" fill="#C41E24" opacity="0.6" transform="rotate(45 525 152)"/>
+        <rect x="541" y="186" width="8" height="8" rx="1" fill="#D4A847" opacity="0.7" transform="rotate(45 545 190)"/>
+        <circle cx="104" cy="214" r="4" fill="#D4A847" opacity="0.5"/>
+        <circle cx="130" cy="168" r="3" fill="#C41E24" opacity="0.5"/>
+        <circle cx="165" cy="132" r="3" fill="#D4A847" opacity="0.5"/>
+        <circle cx="203" cy="104" r="4" fill="#D4A847" opacity="0.4"/>
+        <circle cx="245" cy="85"  r="3" fill="#C41E24" opacity="0.5"/>
+        <circle cx="291" cy="75"  r="3" fill="#D4A847" opacity="0.4"/>
+        <circle cx="344" cy="73"  r="4" fill="#D4A847" opacity="0.5"/>
+        <circle cx="395" cy="75"  r="3" fill="#C41E24" opacity="0.4"/>
+        <circle cx="440" cy="86"  r="3" fill="#D4A847" opacity="0.5"/>
+        <circle cx="480" cy="104" r="4" fill="#D4A847" opacity="0.4"/>
+        <circle cx="515" cy="132" r="3" fill="#C41E24" opacity="0.5"/>
+        <circle cx="546" cy="168" r="3" fill="#D4A847" opacity="0.5"/>
+        <circle cx="562" cy="214" r="4" fill="#D4A847" opacity="0.4"/>
+
+        <!-- Apertura forno (interno scuro) -->
+        <path d="M180,292 Q180,168 350,168 Q520,168 520,292 Z" fill="#0d0808"/>
+
+        <!-- Glow interno -->
+        <ellipse id="oven-glow" cx="350" cy="270" rx="150" ry="120" fill="url(#innerGlow)" opacity="0.5"/>
+        <ellipse cx="350" cy="230" rx="90" ry="70" fill="url(#glowTop)" opacity="0.3"/>
+
+        <!-- Fiamme -->
+        <path class="oven-flames" d="M300,290 C295,270 305,255 295,240 C285,255 280,268 290,280 C280,272 278,258 285,245 C272,260 270,278 282,290 Z" fill="#FF6B00" opacity="0.5" filter="url(#flameGlow)"/>
+        <path class="oven-flames" d="M350,292 C344,268 358,248 348,228 C336,248 330,268 342,282 C330,272 326,254 336,238 C320,258 318,280 334,292 Z" fill="#E85D3A" opacity="0.5" filter="url(#flameGlow)"/>
+        <path class="oven-flames" d="M400,290 C396,272 408,257 400,244 C390,258 386,272 396,283 C386,274 384,260 392,248 C378,263 377,280 390,290 Z" fill="#FF8C00" opacity="0.5" filter="url(#flameGlow)"/>
+
+        <!-- Bordo bocca forno (decorativo oro) -->
+        <path d="M180,292 Q180,168 350,168 Q520,168 520,292" fill="none" stroke="#D4A847" stroke-width="2.5" opacity="0.6"/>
+
+        <!-- Piano forno (soglia) -->
+        <rect x="160" y="288" width="380" height="12" rx="4" fill="#3a3a3a"/>
+        <rect x="160" y="288" width="380" height="3" rx="2" fill="#D4A847" opacity="0.4"/>
+
+      </svg>
+    </div>
+
+    <!-- PIZZA SU PALA SVG -->
+    <div class="pizza-peel" id="hero-pizza-group">
+      <svg class="pizza-svg" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <filter id="pizzaShadow">
+            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+          </filter>
+        </defs>
+
+        <!-- Manico pala (legno) -->
+        <rect x="186" y="310" width="28" height="280" rx="8" fill="#7a4520"/>
+        <rect x="190" y="310" width="6"  height="280" rx="3" fill="#8d5230" opacity="0.6"/>
+        <rect x="196" y="310" width="3"  height="280" rx="2" fill="#6b3a18" opacity="0.4"/>
+
+        <!-- Testa pala (metallo) -->
+        <ellipse cx="200" cy="316" rx="82" ry="10" fill="#888"/>
+        <rect    x="118" y="200" width="164" height="120" rx="6" fill="#999"/>
+        <rect    x="118" y="200" width="164" height="4"   rx="2" fill="#bbb" opacity="0.6"/>
+        <rect    x="125" y="208" width="60"  height="3" rx="2" fill="#ccc" opacity="0.3"/>
+
+        <!-- Pizza: crosta esterna -->
+        <circle cx="200" cy="240" r="155" fill="#d4a055" filter="url(#pizzaShadow)"/>
+        <circle cx="200" cy="240" r="155" fill="none" stroke="#c49045" stroke-width="4" opacity="0.5"/>
+        <circle cx="200" cy="240" r="148" fill="none" stroke="#c49045" stroke-width="3" opacity="0.3"/>
+
+        <!-- Pizza: base impasto -->
+        <circle cx="200" cy="240" r="148" fill="#e8c080"/>
+
+        <!-- Salsa pomodoro -->
+        <circle cx="200" cy="240" r="128" fill="#b5271e"/>
+        <circle cx="200" cy="240" r="128" fill="none" stroke="#a02018" stroke-width="2" opacity="0.3"/>
+
+        <!-- Macchie mozzarella -->
+        <ellipse cx="200" cy="220" rx="30" ry="24" fill="#f5e6a3"/>
+        <ellipse cx="245" cy="255" rx="26" ry="20" fill="#f5e8a8"/>
+        <ellipse cx="158" cy="258" rx="22" ry="18" fill="#f5e6a3"/>
+        <ellipse cx="220" cy="278" rx="20" ry="16" fill="#f0e099"/>
+        <ellipse cx="175" cy="218" rx="18" ry="15" fill="#f5e8a8"/>
+        <ellipse cx="232" cy="210" rx="14" ry="11" fill="#f3e5a0"/>
+        <ellipse cx="163" cy="240" rx="12" ry="10" fill="#f0e099"/>
+
+        <!-- Olive nere -->
+        <ellipse cx="215" cy="248" rx="9"  ry="6"  fill="#2a2a2a"/>
+        <ellipse cx="183" cy="228" rx="8"  ry="5"  fill="#2a2a2a"/>
+        <ellipse cx="236" cy="270" rx="9"  ry="6"  fill="#2a2a2a"/>
+        <ellipse cx="168" cy="268" rx="8"  ry="5"  fill="#2a2a2a"/>
+        <ellipse cx="215" cy="248" rx="4"  ry="3"  fill="#5a5a5a"/>
+        <ellipse cx="183" cy="228" rx="3"  ry="2.5" fill="#5a5a5a"/>
+        <ellipse cx="236" cy="270" rx="4"  ry="3"  fill="#5a5a5a"/>
+        <ellipse cx="168" cy="268" rx="3"  ry="2.5" fill="#5a5a5a"/>
+
+        <!-- Pomodorini -->
+        <circle cx="242" cy="232" r="10" fill="#c41e24"/>
+        <circle cx="170" cy="250" r="9"  fill="#c41e24"/>
+        <circle cx="210" cy="268" r="8"  fill="#d42020"/>
+        <circle cx="240" cy="229" r="4"  fill="#e84040" opacity="0.5"/>
+        <circle cx="168" cy="247" r="3"  fill="#e84040" opacity="0.5"/>
+
+        <!-- Foglie di basilico -->
+        <path d="M188,210 C183,202 192,196 196,205 C200,196 208,201 203,210 C198,214 190,214 188,210 Z" fill="#2e7d32"/>
+        <path d="M188,210 C191,207 196,207 198,210" fill="none" stroke="#1b5e20" stroke-width="0.8"/>
+        <path d="M226,240 C221,232 230,226 234,235 C238,226 246,231 241,240 C236,244 228,244 226,240 Z" fill="#388e3c"/>
+        <path d="M226,240 C229,237 234,237 236,240" fill="none" stroke="#2e7d32" stroke-width="0.8"/>
+        <path d="M195,272 C191,265 198,260 202,268 C205,260 212,264 208,272 C204,276 197,276 195,272 Z" fill="#2e7d32"/>
+
+        <!-- Bolle cottura -->
+        <circle cx="225" cy="235" r="7" fill="#c4870a" opacity="0.6"/>
+        <circle cx="177" cy="245" r="5" fill="#c4870a" opacity="0.5"/>
+        <circle cx="210" cy="258" r="6" fill="#b8780a" opacity="0.5"/>
+        <circle cx="248" cy="246" r="4" fill="#c4870a" opacity="0.4"/>
+
+      </svg>
+    </div>
+  </div>
+
+  <!-- TESTO HERO -->
+  <div class="hero-text" id="hero-text">
+    <div class="hero-badge">Forno a legna &middot; Casalecchio di Reno</div>
+    <h1>Da Zio <span>Vins</span></h1>
+    <p class="hero-tagline">Pizza napoletana. Forno a legna.<br>Casalecchio di Reno.</p>
+    <div class="hero-ctas">
+      <a href="menu.html" class="btn-primary">
+        Guarda il menu
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+      <a href="https://wa.me/393801822037" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Scrivici
+      </a>
+    </div>
+    <div class="hero-scroll-hint">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RIBBON ════════════════════════════════════════════════ -->
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track">
+    <span class="ribbon-item">Pomodoro San Marzano <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Bufala Campana DOP <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Forno a Legna <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Lievitazione 48 Ore <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Impasto Integrale <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Olio Piccante del Sud <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Casalecchio di Reno <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Pomodoro San Marzano <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Bufala Campana DOP <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Forno a Legna <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Lievitazione 48 Ore <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Impasto Integrale <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Olio Piccante del Sud <span class="ribbon-sep">&#9670;</span></span>
+    <span class="ribbon-item">Casalecchio di Reno <span class="ribbon-sep">&#9670;</span></span>
+  </div>
+</div>
+
+<!-- ══ IMPASTO ═══════════════════════════════════════════════ -->
+<section id="impasto">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-tag">L'Impasto</span>
+      <h2 class="section-title" style="color: var(--bianco);">Non &egrave; marketing.<br>È come facciamo la pizza.</h2>
+      <p class="section-sub">Ogni pizza nasce da un impasto con il 30% di farina integrale, lievitato per almeno 48 ore. Niente scorciatoie. Solo farina, acqua, sale e tempo.</p>
+    </div>
+
+    <div class="impasto-grid">
+      <div class="impasto-features">
+        <div class="impasto-feat reveal rd1">
+          <svg class="impasto-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 0v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+          </svg>
+          <div class="impasto-feat-label">Farina integrale</div>
+          <div class="impasto-feat-value">30%</div>
+        </div>
+        <div class="impasto-feat reveal rd2">
+          <svg class="impasto-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <div class="impasto-feat-label">Lievitazione minima</div>
+          <div class="impasto-feat-value">48 Ore</div>
+        </div>
+        <div class="impasto-feat reveal rd3">
+          <svg class="impasto-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+            <line x1="4" y1="22" x2="4" y2="15"/>
+          </svg>
+          <div class="impasto-feat-label">Cottura</div>
+          <div class="impasto-feat-value">Forno a Legna</div>
+        </div>
+        <div class="impasto-feat reveal rd4">
+          <svg class="impasto-feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <div class="impasto-feat-label">Pomodoro</div>
+          <div class="impasto-feat-value">San Marzano</div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="reveal" style="font-family: var(--font-serif); font-size:1.3rem; color: var(--bianco); margin-bottom: 1.25rem; font-weight: 700;">Scegli il tuo impasto</h3>
+        <div class="impasto-types">
+          <div class="impasto-type reveal rd1">
+            <span class="impasto-num">01</span>
+            <div class="impasto-type-info">
+              <div class="impasto-type-name">Classico</div>
+              <div class="impasto-type-desc">Impasto tradizionale napoletano, 30% integrale</div>
+            </div>
+            <span class="badge badge-verde">Base</span>
+          </div>
+          <div class="impasto-type reveal rd2">
+            <span class="impasto-num">02</span>
+            <div class="impasto-type-info">
+              <div class="impasto-type-name">Pinsa</div>
+              <div class="impasto-type-desc">Mais, riso, doppio zero &ndash; croccante e leggera</div>
+            </div>
+            <span class="badge badge-rosso">+&euro;3</span>
+          </div>
+          <div class="impasto-type reveal rd3">
+            <span class="impasto-num">03</span>
+            <div class="impasto-type-info">
+              <div class="impasto-type-name">Integrale e Farro Misto</div>
+              <div class="impasto-type-desc">Ricco di fibre, sapore intenso e avvolgente</div>
+            </div>
+            <span class="badge badge-rosso">+&euro;3</span>
+          </div>
+          <div class="impasto-type reveal rd4">
+            <span class="impasto-num">04</span>
+            <div class="impasto-type-info">
+              <div class="impasto-type-name">10 Cereali</div>
+              <div class="impasto-type-desc">Mix di dieci cereali selezionati, unico in zona</div>
+            </div>
+            <span class="badge badge-rosso">+&euro;3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHI SIAMO ══════════════════════════════════════════════ -->
+<section id="chi-siamo">
+  <div class="section-inner">
+    <div class="chi-content reveal">
+      <span class="section-tag">Chi Siamo</span>
+      <h2 class="section-title">Da Zio Vins si viene per la pizza.</h2>
+      <p>Una pizzeria di quartiere con un'idea fissa: fare la pizza come si deve. Forno a legna vero, impasto lavorato ogni giorno, pomodoro San Marzano, bufala campana DOP. Niente complicazioni. Da Zio Vins trovi quello che cerchi: una pizza buona, onesta e a un prezzo che non fa male al portafoglio.</p>
+    </div>
+    <div class="chi-cards">
+      <div class="chi-card reveal rd1">
+        <div class="chi-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+            <line x1="4" y1="22" x2="4" y2="15"/>
+          </svg>
+        </div>
+        <div class="chi-card-title">Forno a legna</div>
+        <p class="chi-card-text">Cottura ad alta temperatura, bordi alveolati e fondo croccante. Come vuole la tradizione napoletana.</p>
+      </div>
+      <div class="chi-card reveal rd2">
+        <div class="chi-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="chi-card-title">Lievitazione 48h</div>
+        <p class="chi-card-text">L'impasto riposa almeno 48 ore. Pi&ugrave; digeribile, pi&ugrave; profumato, pi&ugrave; buono.</p>
+      </div>
+      <div class="chi-card reveal rd3">
+        <div class="chi-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 3z"/>
+          </svg>
+        </div>
+        <div class="chi-card-title">Olio piccante</div>
+        <p class="chi-card-text">Olio piccante del Sud, fatto in casa. Un filo sulla pizza cambia tutto.</p>
+      </div>
+      <div class="chi-card reveal rd4">
+        <div class="chi-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <div class="chi-card-title">Prezzi onesti</div>
+        <p class="chi-card-text">Margherita a &euro;5. Perch&eacute; una buona pizza non deve costare una fortuna.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DOVE SIAMO ═════════════════════════════════════════════ -->
+<section id="dove-siamo">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center; margin-bottom:3rem;">
+      <span class="section-tag">Dove Siamo</span>
+      <h2 class="section-title">Vieni a trovarci</h2>
+      <p class="section-sub" style="margin:0 auto;">Siamo a Casalecchio di Reno, a due passi da Bologna.</p>
+    </div>
+    <div class="dove-grid">
+      <div class="dove-map reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.1456789!2d11.2743!3d44.4737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI4JzI1LjMiTiAxMcKwMTYnMjcuNSJF!5e0!3m2!1sit!2sit!4v1680000000000!5m2!1sit!2sit"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Posizione Pizzeria Da Zio Vins su Google Maps">
+        </iframe>
+      </div>
+
+      <div class="reveal rd2">
+        <div class="dove-info-head">
+          <h3 class="section-title">Pizzeria Da Zio Vins</h3>
+          <div class="dove-address">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Via Giovanni Cimabue 1/2, 40033 Casalecchio di Reno (BO)</span>
+          </div>
+        </div>
+
+        <div class="dove-orari">
+          <div class="dove-orari-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Orari di apertura
+          </div>
+          <div class="dove-row">
+            <span class="dove-day">Luned&igrave;</span>
+            <span class="dove-time chiuso">Chiuso</span>
+          </div>
+          <div class="dove-row">
+            <span class="dove-day">Marted&igrave; &ndash; Sabato</span>
+            <span class="dove-time">12:00&ndash;14:30 / 18:00&ndash;22:30</span>
+          </div>
+          <div class="dove-row">
+            <span class="dove-day">Domenica</span>
+            <span class="dove-time">18:00&ndash;22:30 (solo cena)</span>
+          </div>
+        </div>
+
+        <div class="dove-buttons">
+          <a href="tel:0510707131" class="dove-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 011.09 2.18 2 2 0 013.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+            </svg>
+            Chiama: 051 070 7131
+          </a>
+          <a href="https://wa.me/393801822037" target="_blank" rel="noopener noreferrer" class="dove-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp: 380 182 2037
+          </a>
+          <a href="https://maps.google.com/?q=Via+Giovanni+Cimabue+1/2+Casalecchio+di+Reno" target="_blank" rel="noopener noreferrer" class="dove-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Indicazioni su Google Maps
+          </a>
+        </div>
+
+        <div class="dove-promo">
+          <p class="dove-promo-text">
+            <strong>Offerta fedelt&agrave;:</strong> ogni 30&euro; di spesa ricevi 1 bottiglia d'acqua da 1,5L in omaggio!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ORDINA ONLINE ══════════════════════════════════════════ -->
+<section id="ordina">
+  <div class="section-inner">
+    <div class="ordina-head reveal">
+      <span class="section-tag">Ordina Online</span>
+      <h2 class="section-title" style="color: var(--bianco);">Te la portiamo a casa</h2>
+      <p class="section-sub">Ordina comodamente dal divano. Siamo su Just Eat e Deliveroo.</p>
+    </div>
+    <div class="ordina-cards">
+      <div class="ordina-card reveal rd1">
+        <div class="ordina-card-logo" style="color: #FF6600;">Just Eat</div>
+        <div class="ordina-card-name">Just Eat</div>
+        <p class="ordina-card-desc">Ordina la tua pizza preferita direttamente su Just Eat. Consegna a domicilio rapida.</p>
+        <a href="https://www.justeat.it/restaurants-pizzeria-da-zio-vinss-72-casalecchio-di-reno-/menu#pre-order" target="_blank" rel="noopener noreferrer" class="ordina-card-link">
+          Ordina su Just Eat
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+      <div class="ordina-card reveal rd2">
+        <div class="ordina-card-logo" style="color: #00CCBC;">Deliveroo</div>
+        <div class="ordina-card-name">Deliveroo</div>
+        <p class="ordina-card-desc">Consegna veloce con Deliveroo. Traccia il tuo ordine in tempo reale.</p>
+        <a href="https://deliveroo.it/it/menu/bologna/viola/pizzeria-da-zio-vinsss72" target="_blank" rel="noopener noreferrer" class="ordina-card-link">
+          Ordina su Deliveroo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+      <div class="ordina-card reveal rd3">
+        <div class="ordina-card-logo" style="color: #34E0A1;">TripAdvisor</div>
+        <div class="ordina-card-name">TripAdvisor</div>
+        <p class="ordina-card-desc">Leggi le recensioni e scopri perch&eacute; i nostri clienti tornano sempre.</p>
+        <a href="https://www.tripadvisor.it/Restaurant_Review-g1552725-d20130009-Reviews-Pizzeria_Lupo_Alberto_1-Casalecchio_di_Reno_Province_of_Bologna_Emilia_Romagna.html" target="_blank" rel="noopener noreferrer" class="ordina-card-link">
+          Vedi su TripAdvisor
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Da Zio <span>Vins</span></div>
+        <p class="footer-brand-desc">Pizzeria napoletana con forno a legna a Casalecchio di Reno. Impasto integrale, lievitazione 48 ore, pomodoro San Marzano.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigazione</div>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="#chi-siamo">Chi Siamo</a>
+          <a href="#dove-siamo">Dove Siamo</a>
+          <a href="contatti.html">Contatti</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-col-title">Contatti</div>
+        <div class="footer-contact-row">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 011.09 2.18 2 2 0 013.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+          <a href="tel:0510707131">051 070 7131</a>
+        </div>
+        <div class="footer-contact-row">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <a href="https://wa.me/393801822037" target="_blank" rel="noopener noreferrer">380 182 2037</a>
+        </div>
+        <div class="footer-contact-row">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Via Giovanni Cimabue 1/2,<br>40033 Casalecchio di Reno (BO)</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2025 Pizzeria Da Zio Vins. Tutti i diritti riservati.</span>
+      <span class="footer-credit">Sito web by <a href="https://growlyagency.com" target="_blank" rel="noopener noreferrer">Growly</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ WHATSAPP FAB ═══════════════════════════════════════════ -->
+<a href="https://wa.me/393801822037" target="_blank" rel="noopener noreferrer" class="wa-fab" aria-label="Contattaci su WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ══ SCRIPTS ════════════════════════════════════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
+
+</body>
+</html>

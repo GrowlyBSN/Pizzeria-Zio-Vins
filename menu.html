@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu &ndash; Da Zio Vins | Pizzeria Napoletana Casalecchio di Reno</title>
+  <meta name="description" content="Scopri il menu completo della Pizzeria Da Zio Vins: oltre 80 pizze, calzoni, panini, bibite. Forno a legna, impasto 48 ore, San Marzano. Casalecchio di Reno." />
+  <meta property="og:title" content="Menu – Da Zio Vins | Pizzeria Napoletana Casalecchio di Reno" />
+  <meta property="og:description" content="Oltre 80 pizze, impasto fresco, forno a legna. Scopri tutte le nostre specialita." />
+  <meta name="theme-color" content="#C41E24" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════════ -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Da Zio <span>Vins</span></a>
+    <div class="nav-links">
+      <a href="menu.html" class="active">Menu</a>
+      <a href="index.html#impasto">L'Impasto</a>
+      <a href="index.html#chi-siamo">Chi Siamo</a>
+      <a href="index.html#dove-siamo">Dove Siamo</a>
+      <a href="contatti.html">Contatti</a>
+      <a href="tel:0510707131" class="nav-cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 011.09 2.18 2 2 0 013.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+        </svg>
+        0510707131
+      </a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Apri menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <a href="menu.html" class="active">Menu</a>
+  <a href="index.html#impasto">L'Impasto</a>
+  <a href="index.html#chi-siamo">Chi Siamo</a>
+  <a href="index.html#dove-siamo">Dove Siamo</a>
+  <a href="contatti.html">Contatti</a>
+  <a href="tel:0510707131" class="nav-cta">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 011.09 2.18 2 2 0 013.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+    </svg>
+    0510707131
+  </a>
+</div>
+
+<!-- ══ PAGE HERO ══════════════════════════════════════════════ -->
+<header class="page-hero">
+  <div class="page-hero-grain"></div>
+  <div class="page-hero-inner">
+    <div class="page-hero-breadcrumb">
+      <a href="index.html">Home</a>
+      <span>&#8250;</span>
+      <span>Menu</span>
+    </div>
+    <h1>Il <span>Menu</span></h1>
+    <p>Scegli la tua pizza. Oltre 80 pizze, impasto fresco, forno a legna.</p>
+  </div>
+</header>
+
+<!-- ══ MENU CONTENT ═══════════════════════════════════════════ -->
+<section class="menu-section" style="padding-top: 3rem;">
+  <div class="section-inner">
+
+    <!-- Nota principale -->
+    <div class="menu-note reveal">
+      <strong>Su tutte le pizze:</strong> pomodoro San Marzano, mozzarella fior di latte e mozzarella di bufala campana DOP.<br>
+      <strong>Impasto:</strong> 30% integrale, lievitazione minimo 48 ore.
+    </div>
+
+    <!-- Tabs navigazione categorie -->
+    <div class="menu-tabs" role="tablist">
+      <button class="menu-tab active" data-cat="tradizionali" role="tab">Tradizionali</button>
+      <button class="menu-tab" data-cat="farcite" role="tab">Farcite</button>
+      <button class="menu-tab" data-cat="bianche" role="tab">Bianche</button>
+      <button class="menu-tab" data-cat="mezzo-metro" role="tab">Mezzo Metro</button>
+      <button class="menu-tab" data-cat="calzoni" role="tab">Calzoni</button>
+      <button class="menu-tab" data-cat="panini" role="tab">Panini</button>
+      <button class="menu-tab" data-cat="bibite" role="tab">Bibite</button>
+      <button class="menu-tab" data-cat="supplementi" role="tab">Supplementi</button>
+    </div>
+
+    <!-- ── PIZZE TRADIZIONALI ─────────────────────────────── -->
+    <div class="menu-category active" id="cat-tradizionali">
+      <h2 class="menu-category-title">Pizze Tradizionali</h2>
+      <p class="menu-category-sub">Le classiche della tradizione napoletana. Tutte con San Marzano e bufala DOP.</p>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Marinara</div>
+            <div class="menu-item-ingredients">Pomodoro, aglio, origano, olio</div>
+          </div>
+          <div class="menu-item-price">&euro;4</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Margherita</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, basilico</div>
+          </div>
+          <div class="menu-item-price">&euro;5</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Napoli</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, acciughe, capperi, origano</div>
+          </div>
+          <div class="menu-item-price">&euro;6,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Margherita con Bufala</div>
+            <div class="menu-item-ingredients">Pomodoro, bufala campana DOP, basilico fresco</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Diavola</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, salame piccante</div>
+          </div>
+          <div class="menu-item-price">&euro;7</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Prosciutto e Funghi</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, prosciutto cotto, funghi</div>
+          </div>
+          <div class="menu-item-price">&euro;7</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Capricciosa</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, prosciutto cotto, funghi, olive, carciofi</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Quattro Stagioni</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, prosciutto, funghi, olive, carciofi (divisi)</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Quattro Formaggi</div>
+            <div class="menu-item-ingredients">Mozzarella, gorgonzola, scamorza, parmigiano</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Ortolana</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, verdure grigliate di stagione</div>
+          </div>
+          <div class="menu-item-price">&euro;7,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Salsiccia e Friarielli</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, salsiccia, friarielli</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Siciliana</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, melanzane, capperi, olive</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Boscaiola</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, salsiccia, funghi porcini</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Porcini e Speck</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, funghi porcini, speck</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Prosciutto Crudo e Rucola</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, prosciutto crudo, rucola, scaglie parmigiano</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Wurstel e Patatine</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, wurstel, patate fritte</div>
+          </div>
+          <div class="menu-item-price">&euro;7,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Romana</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, acciughe, origano</div>
+          </div>
+          <div class="menu-item-price">&euro;6,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Veneziana</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, cipolle, olive, capperi</div>
+          </div>
+          <div class="menu-item-price">&euro;7,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Americana</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, wurstel, bacon, olive</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Tonno e Cipolla</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, tonno, cipolla</div>
+          </div>
+          <div class="menu-item-price">&euro;7,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Pugliese</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, cipolla, olive, origano</div>
+          </div>
+          <div class="menu-item-price">&euro;7</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Calabrese</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, 'nduja, cipolla rossa, provola</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Primavera</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, pomodorini freschi, rucola, scaglie grana</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PIZZE FARCITE ─────────────────────────────────── -->
+    <div class="menu-category" id="cat-farcite">
+      <h2 class="menu-category-title">Pizze Farcite</h2>
+      <p class="menu-category-sub">Pizze a due strati, farcite dopo la cottura con ingredienti freschi.</p>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Tonno e Cipolla</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, tonno, cipolla</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Prosciutto e Funghi Farcita</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, prosciutto cotto, funghi trifolati</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Capricciosa Farcita</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, prosciutto, funghi, olive, carciofi, uovo</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Salsiccia e Friarielli</div>
+            <div class="menu-item-ingredients">Pomodoro, provola, salsiccia, friarielli saltati in padella</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Norma Farcita</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, melanzane fritte, ricotta salata</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Crudo e Bufala</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, prosciutto crudo di Parma, bufala</div>
+          </div>
+          <div class="menu-item-price">&euro;10</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Boscaiola Farcita</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, salsiccia, funghi porcini</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Wurstel e Patatine Farcita</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, wurstel, patatine fritte</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Verdure Grigliate</div>
+            <div class="menu-item-ingredients">Mozzarella, verdure grigliate di stagione, scamorza affumicata</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Speck e Scamorza</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, speck altoatesino, scamorza affumicata</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Bresaola e Rucola</div>
+            <div class="menu-item-ingredients">Mozzarella, bresaola, rucola, scaglie parmigiano, limone</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Quattro Formaggi Farcita</div>
+            <div class="menu-item-ingredients">Mozzarella, gorgonzola, scamorza, parmigiano, noci</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Pollo e Curry</div>
+            <div class="menu-item-ingredients">Mozzarella, pollo marinato, curry, cipolle caramellate</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Salmone e Rucola</div>
+            <div class="menu-item-ingredients">Mozzarella, salmone affumicato, rucola, pomodorini, limone</div>
+          </div>
+          <div class="menu-item-price">&euro;10</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Del Vins <span class="badge badge-oro">Casa</span></div>
+            <div class="menu-item-ingredients">Pomodoro, provola, salsiccia, friarielli, 'nduja, peperoncino</div>
+          </div>
+          <div class="menu-item-price">&euro;10</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Frutti di Porco <span class="badge badge-hot">Hot</span></div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, salame piccante, 'nduja, guanciale, peperoncino</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Prosciutto Crudo e Grana</div>
+            <div class="menu-item-ingredients">Mozzarella, prosciutto crudo, rucola, grana padano a scaglie</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Diavola Farcita</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, salame piccante, peperoni, olive</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Zucchine e Speck</div>
+            <div class="menu-item-ingredients">Mozzarella, zucchine grigliate, speck, menta fresca</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Stracciata e Pomodorini</div>
+            <div class="menu-item-ingredients">Pomodorini semi-secchi, stracciatella, basilico, olio evo</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Pancetta e Cipolla</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, pancetta croccante, cipolla rossa</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Guanciale e Pecorino</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, guanciale, pecorino romano</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Mortadella e Pistacchi</div>
+            <div class="menu-item-ingredients">Mozzarella, mortadella di Bologna, crema di pistacchio</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Burrata e Pomodorini</div>
+            <div class="menu-item-ingredients">Mozzarella, burrata fresca, pomodorini confit, basilico</div>
+          </div>
+          <div class="menu-item-price">&euro;10</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Porchetta e Patate</div>
+            <div class="menu-item-ingredients">Pomodoro, mozzarella, porchetta artigianale, patate al forno</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Polpa di Granchio</div>
+            <div class="menu-item-ingredients">Mozzarella, polpa di granchio, zucchine, pomodorini</div>
+          </div>
+          <div class="menu-item-price">&euro;10</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Gorgonzola e Noci</div>
+            <div class="menu-item-ingredients">Mozzarella, gorgonzola dolce, noci, miele millefiori</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PIZZE BIANCHE ─────────────────────────────────── -->
+    <div class="menu-category" id="cat-bianche">
+      <h2 class="menu-category-title">Pizze Bianche</h2>
+      <p class="menu-category-sub">Senza pomodoro. La base lascia spazio agli ingredienti.</p>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Tirolese</div>
+            <div class="menu-item-ingredients">Mozzarella, speck, cipolla, scamorza affumicata</div>
+          </div>
+          <div class="menu-item-price">&euro;10</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Funghi e Tartufo</div>
+            <div class="menu-item-ingredients">Mozzarella, funghi misti, crema di tartufo, scaglie grana</div>
+          </div>
+          <div class="menu-item-price">&euro;11</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Patate e Rosmarino</div>
+            <div class="menu-item-ingredients">Mozzarella, patate al forno, rosmarino, olio evo</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Salsiccia e Patate</div>
+            <div class="menu-item-ingredients">Mozzarella, salsiccia fresca, patate, rosmarino</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Crema di Zucca</div>
+            <div class="menu-item-ingredients">Mozzarella, crema di zucca, speck, scaglie grana</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Lardo e Miele</div>
+            <div class="menu-item-ingredients">Mozzarella, lardo di Colonnata, miele di castagno, noci</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Gorgonzola e Pere</div>
+            <div class="menu-item-ingredients">Mozzarella, gorgonzola, pere, noci, radicchio</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Bianca con Nduja</div>
+            <div class="menu-item-ingredients">Mozzarella, 'nduja spalmata, cipolla rossa, provola <span class="badge badge-hot">Hot</span></div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Prosciutto e Scamorza</div>
+            <div class="menu-item-ingredients">Mozzarella, prosciutto cotto, scamorza affumicata</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Porcini</div>
+            <div class="menu-item-ingredients">Mozzarella, funghi porcini trifolati, aglio, prezzemolo</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Ricotta e Spinaci</div>
+            <div class="menu-item-ingredients">Mozzarella, ricotta fresca, spinaci saltati, noce moscata</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Pistacchio e Mortadella</div>
+            <div class="menu-item-ingredients">Mozzarella, crema di pistacchio, mortadella, scaglie grana</div>
+          </div>
+          <div class="menu-item-price">&euro;10</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Aglio Olio e Peperoncino</div>
+            <div class="menu-item-ingredients">Olio evo, aglio, peperoncino, mozzarella</div>
+          </div>
+          <div class="menu-item-price">&euro;7</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Zucchine e Menta</div>
+            <div class="menu-item-ingredients">Mozzarella, zucchine grigliate, menta fresca, pecorino</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Carciofi e Guanciale</div>
+            <div class="menu-item-ingredients">Mozzarella, carciofi romani, guanciale croccante</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Stracciata Burrata</div>
+            <div class="menu-item-ingredients">Mozzarella, burrata pugliese, pomodorini confit, basilico, olio</div>
+          </div>
+          <div class="menu-item-price">&euro;10,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Bresaola e Grana</div>
+            <div class="menu-item-ingredients">Mozzarella, bresaola, rucola, grana padano, limone</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Porchetta Umbra</div>
+            <div class="menu-item-ingredients">Mozzarella, porchetta artigianale, cicorietta, peperoncino</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Molesta <span class="badge badge-hot">Hot</span></div>
+            <div class="menu-item-ingredients">Mozzarella, 'nduja, salame piccante, peperoncino, cipolla rossa, olio piccante</div>
+          </div>
+          <div class="menu-item-price">&euro;9,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Radicchio e Taleggio</div>
+            <div class="menu-item-ingredients">Mozzarella, radicchio brasato, taleggio, noci</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Crudo Rucola e Brie</div>
+            <div class="menu-item-ingredients">Mozzarella, prosciutto crudo, rucola, brie, miele</div>
+          </div>
+          <div class="menu-item-price">&euro;10</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PIZZA MEZZO METRO ────────────────────────────── -->
+    <div class="menu-category" id="cat-mezzo-metro">
+      <h2 class="menu-category-title">Pizza Mezzo Metro</h2>
+      <p class="menu-category-sub">Una pizza da condividere. 50 cm di golosit&agrave;. Supplemento impasto speciale: +€3.</p>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Margherita</div>
+            <div class="menu-item-ingredients">50 cm di pizza margherita classica</div>
+          </div>
+          <div class="menu-item-price">&euro;16</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Farcita 1 Gusto</div>
+            <div class="menu-item-ingredients">50 cm con un condimento a scelta</div>
+          </div>
+          <div class="menu-item-price">&euro;20</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Farcita 3 Gusti</div>
+            <div class="menu-item-ingredients">50 cm divisa in 3 gusti diversi a scelta</div>
+          </div>
+          <div class="menu-item-price">&euro;25</div>
+        </div>
+      </div>
+      <div class="menu-note" style="margin-top:1.5rem;">
+        <strong>Nota:</strong> supplemento mezzo metro +€3,00 per impasti speciali (Pinsa, Integrale&ndash;Farro, 10 Cereali).
+      </div>
+    </div>
+
+    <!-- ── CALZONI ──────────────────────────────────────── -->
+    <div class="menu-category" id="cat-calzoni">
+      <h2 class="menu-category-title">Calzoni</h2>
+      <p class="menu-category-sub">Ripieni, cotti al forno a legna. Croccanti fuori, morbidi dentro.</p>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Classico</div>
+            <div class="menu-item-ingredients">Mozzarella, ricotta, prosciutto cotto, pepe</div>
+          </div>
+          <div class="menu-item-price">&euro;6</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Prosciutto e Funghi</div>
+            <div class="menu-item-ingredients">Mozzarella, prosciutto cotto, funghi trifolati, ricotta</div>
+          </div>
+          <div class="menu-item-price">&euro;7,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Salsiccia e Friarielli</div>
+            <div class="menu-item-ingredients">Mozzarella, salsiccia, friarielli, peperoncino</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Quattro Formaggi</div>
+            <div class="menu-item-ingredients">Mozzarella, gorgonzola, scamorza, ricotta</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Verdure Grigliate</div>
+            <div class="menu-item-ingredients">Mozzarella, verdure grigliate miste, scamorza affumicata</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Speck e Scamorza</div>
+            <div class="menu-item-ingredients">Mozzarella, speck altoatesino, scamorza affumicata</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Diavola</div>
+            <div class="menu-item-ingredients">Mozzarella, salame piccante, pomodoro, peperoncino</div>
+          </div>
+          <div class="menu-item-price">&euro;7,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Capricciosa</div>
+            <div class="menu-item-ingredients">Mozzarella, prosciutto, funghi, olive, carciofi</div>
+          </div>
+          <div class="menu-item-price">&euro;8,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Boscaiola</div>
+            <div class="menu-item-ingredients">Mozzarella, salsiccia, funghi porcini, provola</div>
+          </div>
+          <div class="menu-item-price">&euro;9</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Nduja e Provola</div>
+            <div class="menu-item-ingredients">Provola affumicata, 'nduja, ricotta, peperoncino</div>
+          </div>
+          <div class="menu-item-price">&euro;8</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PANINI ───────────────────────────────────────── -->
+    <div class="menu-category" id="cat-panini">
+      <h2 class="menu-category-title">Panini</h2>
+      <p class="menu-category-sub">Preparati sul momento con ingredienti freschi.</p>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Caprese</div>
+            <div class="menu-item-ingredients">Mozzarella, pomodoro, basilico, olio evo</div>
+          </div>
+          <div class="menu-item-price">&euro;5</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Prosciutto Crudo e Brie</div>
+            <div class="menu-item-ingredients">Prosciutto crudo, brie, rucola, pomodoro</div>
+          </div>
+          <div class="menu-item-price">&euro;6,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Salame e Provolone</div>
+            <div class="menu-item-ingredients">Salame napoletano, provolone piccante, pomodoro</div>
+          </div>
+          <div class="menu-item-price">&euro;6</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Tonno e Pomodoro</div>
+            <div class="menu-item-ingredients">Tonno all'olio, pomodoro, cipolla, lattuga</div>
+          </div>
+          <div class="menu-item-price">&euro;5,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Mortadella e Pistacchio</div>
+            <div class="menu-item-ingredients">Mortadella di Bologna, crema di pistacchio, scaglie grana</div>
+          </div>
+          <div class="menu-item-price">&euro;6</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Porchetta Artigianale</div>
+            <div class="menu-item-ingredients">Porchetta artigianale, insalata, pomodoro, maionese</div>
+          </div>
+          <div class="menu-item-price">&euro;6,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Pollo Grigliato</div>
+            <div class="menu-item-ingredients">Petto di pollo grigliato, lattuga, pomodoro, senape</div>
+          </div>
+          <div class="menu-item-price">&euro;6</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Speck e Scamorza Caldo</div>
+            <div class="menu-item-ingredients">Speck, scamorza affumicata, pomodoro, tostato al forno</div>
+          </div>
+          <div class="menu-item-price">&euro;6,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Bresaola Rucola Grana</div>
+            <div class="menu-item-ingredients">Bresaola, rucola, grana padano, limone, olio evo</div>
+          </div>
+          <div class="menu-item-price">&euro;6,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Vegetariano</div>
+            <div class="menu-item-ingredients">Verdure grigliate, mozzarella, pomodoro, rucola</div>
+          </div>
+          <div class="menu-item-price">&euro;5,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Del Vins Caldo</div>
+            <div class="menu-item-ingredients">Salsiccia, friarielli, provola, peperoncino, tostato al forno</div>
+          </div>
+          <div class="menu-item-price">&euro;7</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── BIBITE ───────────────────────────────────────── -->
+    <div class="menu-category" id="cat-bibite">
+      <h2 class="menu-category-title">Bibite</h2>
+      <p class="menu-category-sub">Consegna a domicilio: +€1 per le bibite.</p>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Acqua Naturale 0,5L</div>
+          </div>
+          <div class="menu-item-price">&euro;1</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Acqua Frizzante 0,5L</div>
+          </div>
+          <div class="menu-item-price">&euro;1</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Coca-Cola, Fanta, Sprite 0,33L</div>
+          </div>
+          <div class="menu-item-price">&euro;2</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Birra in Lattina 0,33L</div>
+            <div class="menu-item-ingredients">Nastro Azzurro / Heineken</div>
+          </div>
+          <div class="menu-item-price">&euro;2,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Succo di Frutta 0,2L</div>
+            <div class="menu-item-ingredients">Pesca, albicocca, arancia</div>
+          </div>
+          <div class="menu-item-price">&euro;1,50</div>
+        </div>
+      </div>
+      <div class="menu-note" style="margin-top:1.5rem;">
+        <strong>Nota:</strong> per gli ordini a domicilio, le bibite hanno un supplemento di +&euro;1,00 a bottiglia/lattina.
+      </div>
+    </div>
+
+    <!-- ── SUPPLEMENTI ─────────────────────────────────── -->
+    <div class="menu-category" id="cat-supplementi">
+      <h2 class="menu-category-title">Supplementi</h2>
+      <p class="menu-category-sub">Aggiunte e personalizzazioni per la tua pizza.</p>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Formaggi</div>
+            <div class="menu-item-ingredients">Aggiunta di formaggi a scelta</div>
+          </div>
+          <div class="menu-item-price">&euro;2</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Salumi</div>
+            <div class="menu-item-ingredients">Aggiunta di salumi a scelta</div>
+          </div>
+          <div class="menu-item-price">&euro;2</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Funghi Porcini</div>
+          </div>
+          <div class="menu-item-price">&euro;2</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Patate Fritte</div>
+          </div>
+          <div class="menu-item-price">&euro;2</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Olive, Rucola, Pomodoro</div>
+          </div>
+          <div class="menu-item-price">&euro;1,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Capperi</div>
+          </div>
+          <div class="menu-item-price">&euro;1,50</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Pomodorini, Verdure</div>
+          </div>
+          <div class="menu-item-price">&euro;2</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Supplemento Mezzo Metro</div>
+            <div class="menu-item-ingredients">Per impasti speciali sulla pizza mezzo metro</div>
+          </div>
+          <div class="menu-item-price">&euro;3</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nota impasti in fondo -->
+    <div class="menu-note-bottom reveal">
+      <strong>Impasti disponibili:</strong> Classico &middot; Pinsa (mais, riso, doppio zero) &middot; Integrale e farro misto &middot; 10 Cereali<br>
+      <strong>Supplemento impasti speciali: +&euro;3,00</strong>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Da Zio <span>Vins</span></div>
+        <p class="footer-brand-desc">Pizzeria napoletana con forno a legna a Casalecchio di Reno. Impasto integrale, lievitazione 48 ore, pomodoro San Marzano.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigazione</div>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="index.html#chi-siamo">Chi Siamo</a>
+          <a href="index.html#dove-siamo">Dove Siamo</a>
+          <a href="contatti.html">Contatti</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-col-title">Contatti</div>
+        <div class="footer-contact-row">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 011.09 2.18 2 2 0 013.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+          <a href="tel:0510707131">051 070 7131</a>
+        </div>
+        <div class="footer-contact-row">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <a href="https://wa.me/393801822037" target="_blank" rel="noopener noreferrer">380 182 2037</a>
+        </div>
+        <div class="footer-contact-row">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Via Giovanni Cimabue 1/2,<br>40033 Casalecchio di Reno (BO)</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2025 Pizzeria Da Zio Vins. Tutti i diritti riservati.</span>
+      <span class="footer-credit">Sito web by <a href="https://growlyagency.com" target="_blank" rel="noopener noreferrer">Growly</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ WHATSAPP FAB ═══════════════════════════════════════════ -->
+<a href="https://wa.me/393801822037" target="_blank" rel="noopener noreferrer" class="wa-fab" aria-label="Contattaci su WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ══ SCRIPTS ════════════════════════════════════════════════ -->
+<script src="js/main.js" defer></script>
+
+</body>
+</html>
