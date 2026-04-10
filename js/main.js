@@ -57,27 +57,33 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       /*
-       * La pizza sale verso la bocca del forno e si rimpicciolisce.
-       * La scomparsa visiva è gestita dallo z-index: il layer .oven-front
-       * (z-index 6) è davanti alla pizza (z-index 5), quindi quando la pizza
-       * entra nell'area del forno viene mascherata — senza bisogno di opacity.
-       * Usiamo opacity solo nell'ultimo 10% del percorso per gestire
-       * eventuali eccedenze oltre la bocca.
+       * La pizza (z-index 8, visibile sopra il forno) sale verso la bocca del forno.
+       * Si rimpicciolisce in prospettiva e svanisce quando raggiunge l'interno buio.
+       * L'effetto "entra nel forno" si crea perché la pizza si restringe verso il
+       * centro della bocca e poi viene "inghiottita" dall'oscurità dell'interno.
        */
+
+      // Fase 1 (0 → 0.7): la pizza sale verso la bocca e si rimpicciolisce
       tl.to('#hero-pizza-group', {
-        y:       '-42vh',   /* sale fino dentro la bocca del forno */
-        scale:   0.22,      /* rimpicciolisce come in prospettiva */
-        opacity: 0,         /* svanisce completamente una volta dentro */
-        ease:    'power2.inOut'
+        y:     '-30vh',
+        scale: 0.38,
+        ease:  'power2.in'
       }, 0);
+
+      // Fase 2 (0.7 → 1): l'ultimo tratto, già dentro la bocca, svanisce nell'oscurità
+      tl.to('#hero-pizza-group', {
+        y:       '-40vh',
+        scale:   0.18,
+        opacity: 0,
+        ease:    'power3.in'
+      }, 0.7);
 
       // Bagliore forno si intensifica man mano che la pizza entra
       var ovenGlow = document.getElementById('oven-glow');
       if (ovenGlow) {
         tl.to('#oven-glow', {
-          opacity:  1,
-          attr:     { rx: 180, ry: 145 },
-          ease:     'power1.inOut'
+          opacity: 1,
+          ease:    'power1.inOut'
         }, 0);
       }
 
@@ -85,10 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var ovenFlames = document.querySelectorAll('.oven-flames');
       if (ovenFlames.length) {
         tl.to('.oven-flames', {
-          opacity:   1,
-          scaleY:    1.4,
-          transformOrigin: 'bottom center',
-          ease:      'power1.inOut'
+          opacity: 1,
+          ease:    'power1.inOut'
         }, 0);
       }
 

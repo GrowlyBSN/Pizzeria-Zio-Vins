@@ -249,6 +249,40 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transform: translateY(-2px);
 }
 
+/* ── Pulsante menu hero: più grande e prominente ── */
+.btn-hero-menu {
+  padding: 1rem 2.25rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 24px rgba(196, 30, 36, 0.45);
+}
+
+.btn-hero-menu:hover {
+  box-shadow: 0 8px 32px rgba(196, 30, 36, 0.6);
+}
+
+/* ── Pulsante WhatsApp hero: verde WhatsApp ── */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: #fff;
+  padding: 1rem 1.75rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.5);
+}
+
 /* ── HERO ──────────────────────────────────────────────────── */
 #hero {
   position: relative;
@@ -300,31 +334,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transform: translateX(-50%);
   transform-origin: bottom center;
   width: min(260px, 58vw);
-  z-index: 5;
+  z-index: 8;
   filter: drop-shadow(0 10px 30px rgba(0,0,0,0.6));
 }
 
 .pizza-svg {
   width: 100%;
   height: auto;
-}
-
-/* Layer SVG sagomato davanti al forno che maschera la pizza quando entra */
-.oven-front {
-  position: absolute;
-  /* si sovrappone esattamente a .oven-wrap */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(700px, 90vw);
-  z-index: 6;            /* davanti alla pizza (z-index 5), dietro al testo (z-index 10) */
-  pointer-events: none;
-}
-
-.oven-mask-svg {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .hero-text {
