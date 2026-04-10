@@ -230,73 +230,239 @@
     <div class="pizza-peel" id="hero-pizza-group">
       <svg class="pizza-svg" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
-          <filter id="pizzaShadow">
-            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+          <!-- Ombra pizza -->
+          <filter id="pizzaShadow" x="-15%" y="-15%" width="130%" height="130%">
+            <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.55"/>
+          </filter>
+          <!-- Gradiente crosta esterna: bruno dorato con bordi bruciati -->
+          <radialGradient id="crustGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#c8843a"/>
+            <stop offset="70%"  stop-color="#b06a25"/>
+            <stop offset="100%" stop-color="#8a4a18"/>
+          </radialGradient>
+          <!-- Gradiente impasto interno -->
+          <radialGradient id="doughGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#f2d18a"/>
+            <stop offset="100%" stop-color="#d4a04e"/>
+          </radialGradient>
+          <!-- Gradiente salsa pomodoro -->
+          <radialGradient id="sauceGrad" cx="40%" cy="40%" r="60%">
+            <stop offset="0%"   stop-color="#cc3520"/>
+            <stop offset="100%" stop-color="#8c1c10"/>
+          </radialGradient>
+          <!-- Gradiente mozzarella: bianco con bordi bruciati -->
+          <radialGradient id="mozz1" cx="40%" cy="35%" r="60%">
+            <stop offset="0%"   stop-color="#fff9e8"/>
+            <stop offset="70%"  stop-color="#f0d88a"/>
+            <stop offset="100%" stop-color="#c89030"/>
+          </radialGradient>
+          <radialGradient id="mozz2" cx="35%" cy="30%" r="65%">
+            <stop offset="0%"   stop-color="#fef7e4"/>
+            <stop offset="65%"  stop-color="#eed080"/>
+            <stop offset="100%" stop-color="#c08828"/>
+          </radialGradient>
+          <radialGradient id="mozz3" cx="45%" cy="40%" r="55%">
+            <stop offset="0%"   stop-color="#fff8e6"/>
+            <stop offset="60%"  stop-color="#ecd478"/>
+            <stop offset="100%" stop-color="#b87820"/>
+          </radialGradient>
+          <!-- Gradiente manico pala: venatura legno -->
+          <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#6b3a14"/>
+            <stop offset="30%"  stop-color="#8a5228"/>
+            <stop offset="55%"  stop-color="#7c4820"/>
+            <stop offset="75%"  stop-color="#9a5e32"/>
+            <stop offset="100%" stop-color="#6b3a14"/>
+          </linearGradient>
+          <!-- Gradiente pala metallo -->
+          <linearGradient id="metalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%"   stop-color="#c0c0c0"/>
+            <stop offset="40%"  stop-color="#909090"/>
+            <stop offset="100%" stop-color="#686868"/>
+          </linearGradient>
+          <!-- Filtro fuoco/calore per la pizza -->
+          <filter id="heatGlow" x="-5%" y="-5%" width="110%" height="110%">
+            <feGaussianBlur stdDeviation="1.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
           </filter>
         </defs>
 
-        <!-- Manico pala (legno) -->
-        <rect x="186" y="310" width="28" height="280" rx="8" fill="#7a4520"/>
-        <rect x="190" y="310" width="6"  height="280" rx="3" fill="#8d5230" opacity="0.6"/>
-        <rect x="196" y="310" width="3"  height="280" rx="2" fill="#6b3a18" opacity="0.4"/>
+        <!-- ─── MANICO PALA (legno) ─── -->
+        <rect x="184" y="306" width="32" height="288" rx="9" fill="url(#woodGrad)"/>
+        <!-- venature legno -->
+        <path d="M188,320 Q192,380 188,440 Q185,500 190,560" fill="none" stroke="#5a2e0c" stroke-width="1" opacity="0.35"/>
+        <path d="M198,315 Q200,400 197,480 Q195,540 199,580" fill="none" stroke="#5a2e0c" stroke-width="0.8" opacity="0.25"/>
+        <path d="M208,322 Q212,390 209,460 Q207,520 211,570" fill="none" stroke="#7a4820" stroke-width="0.8" opacity="0.3"/>
+        <!-- raccordo legno-metallo -->
+        <rect x="182" y="300" width="36" height="14" rx="4" fill="#5a2e0c" opacity="0.5"/>
 
-        <!-- Testa pala (metallo) -->
-        <ellipse cx="200" cy="316" rx="82" ry="10" fill="#888"/>
-        <rect    x="118" y="200" width="164" height="120" rx="6" fill="#999"/>
-        <rect    x="118" y="200" width="164" height="4"   rx="2" fill="#bbb" opacity="0.6"/>
-        <rect    x="125" y="208" width="60"  height="3" rx="2" fill="#ccc" opacity="0.3"/>
+        <!-- ─── TESTA PALA (metallo) ─── -->
+        <!-- corpo pala rettangolare arrotondato -->
+        <rect x="110" y="185" width="180" height="128" rx="8" fill="url(#metalGrad)"/>
+        <!-- riflesso luce superiore -->
+        <rect x="115" y="188" width="170" height="6" rx="3" fill="#d8d8d8" opacity="0.5"/>
+        <!-- bordi laterali scuri -->
+        <rect x="110" y="185" width="6"   height="128" rx="3" fill="#505050" opacity="0.4"/>
+        <rect x="284" y="185" width="6"   height="128" rx="3" fill="#404040" opacity="0.4"/>
+        <!-- ellisse base raccordo -->
+        <ellipse cx="200" cy="313" rx="90" ry="11" fill="#707070"/>
+        <ellipse cx="200" cy="311" rx="88" ry="6"  fill="#909090" opacity="0.5"/>
+        <!-- righe texture pala -->
+        <line x1="116" y1="210" x2="284" y2="210" stroke="#808080" stroke-width="0.8" opacity="0.35"/>
+        <line x1="116" y1="230" x2="284" y2="230" stroke="#808080" stroke-width="0.8" opacity="0.35"/>
+        <line x1="116" y1="250" x2="284" y2="250" stroke="#808080" stroke-width="0.8" opacity="0.35"/>
+        <line x1="116" y1="270" x2="284" y2="270" stroke="#808080" stroke-width="0.8" opacity="0.35"/>
+        <line x1="116" y1="290" x2="284" y2="290" stroke="#808080" stroke-width="0.8" opacity="0.35"/>
 
-        <!-- Pizza: crosta esterna -->
-        <circle cx="200" cy="240" r="155" fill="#d4a055" filter="url(#pizzaShadow)"/>
-        <circle cx="200" cy="240" r="155" fill="none" stroke="#c49045" stroke-width="4" opacity="0.5"/>
-        <circle cx="200" cy="240" r="148" fill="none" stroke="#c49045" stroke-width="3" opacity="0.3"/>
+        <!-- ─── PIZZA ─── -->
 
-        <!-- Pizza: base impasto -->
-        <circle cx="200" cy="240" r="148" fill="#e8c080"/>
+        <!-- Ombra sotto la pizza -->
+        <ellipse cx="200" cy="258" rx="158" ry="18" fill="#000" opacity="0.25"/>
 
-        <!-- Salsa pomodoro -->
-        <circle cx="200" cy="240" r="128" fill="#b5271e"/>
-        <circle cx="200" cy="240" r="128" fill="none" stroke="#a02018" stroke-width="2" opacity="0.3"/>
+        <!-- Crosta esterna (cornicione) -->
+        <circle cx="200" cy="230" r="158" fill="url(#crustGrad)" filter="url(#pizzaShadow)"/>
 
-        <!-- Macchie mozzarella -->
-        <ellipse cx="200" cy="220" rx="30" ry="24" fill="#f5e6a3"/>
-        <ellipse cx="245" cy="255" rx="26" ry="20" fill="#f5e8a8"/>
-        <ellipse cx="158" cy="258" rx="22" ry="18" fill="#f5e6a3"/>
-        <ellipse cx="220" cy="278" rx="20" ry="16" fill="#f0e099"/>
-        <ellipse cx="175" cy="218" rx="18" ry="15" fill="#f5e8a8"/>
-        <ellipse cx="232" cy="210" rx="14" ry="11" fill="#f3e5a0"/>
-        <ellipse cx="163" cy="240" rx="12" ry="10" fill="#f0e099"/>
+        <!-- Leopardatura cornicione: macchie bruciatura -->
+        <circle cx="130" cy="100" r="12" fill="#5a2a08" opacity="0.55"/>
+        <circle cx="160" cy="84"  r="8"  fill="#6b3010" opacity="0.45"/>
+        <circle cx="200" cy="78"  r="10" fill="#5a2a08" opacity="0.5"/>
+        <circle cx="240" cy="83"  r="9"  fill="#6b3010" opacity="0.5"/>
+        <circle cx="270" cy="98"  r="11" fill="#5a2a08" opacity="0.45"/>
+        <circle cx="290" cy="125" r="9"  fill="#6b3010" opacity="0.4"/>
+        <circle cx="302" cy="160" r="8"  fill="#5a2a08" opacity="0.45"/>
+        <circle cx="296" cy="198" r="10" fill="#6b3010" opacity="0.4"/>
+        <circle cx="275" cy="330" r="9"  fill="#5a2a08" opacity="0.45"/>
+        <circle cx="240" cy="350" r="8"  fill="#6b3010" opacity="0.4"/>
+        <circle cx="200" cy="358" r="11" fill="#5a2a08" opacity="0.45"/>
+        <circle cx="160" cy="350" r="9"  fill="#6b3010" opacity="0.4"/>
+        <circle cx="124" cy="332" r="8"  fill="#5a2a08" opacity="0.5"/>
+        <circle cx="102" cy="300" r="10" fill="#6b3010" opacity="0.45"/>
+        <circle cx="100" cy="260" r="9"  fill="#5a2a08" opacity="0.45"/>
+        <circle cx="104" cy="195" r="8"  fill="#6b3010" opacity="0.4"/>
+        <!-- macchie piccole sparse sul cornicione -->
+        <circle cx="145" cy="92"  r="5"  fill="#3d1a06" opacity="0.4"/>
+        <circle cx="255" cy="88"  r="4"  fill="#3d1a06" opacity="0.35"/>
+        <circle cx="308" cy="145" r="5"  fill="#3d1a06" opacity="0.4"/>
+        <circle cx="107" cy="155" r="4"  fill="#3d1a06" opacity="0.35"/>
+        <circle cx="218" cy="360" r="4"  fill="#3d1a06" opacity="0.35"/>
+        <circle cx="182" cy="357" r="5"  fill="#3d1a06" opacity="0.4"/>
 
-        <!-- Olive nere -->
-        <ellipse cx="215" cy="248" rx="9"  ry="6"  fill="#2a2a2a"/>
-        <ellipse cx="183" cy="228" rx="8"  ry="5"  fill="#2a2a2a"/>
-        <ellipse cx="236" cy="270" rx="9"  ry="6"  fill="#2a2a2a"/>
-        <ellipse cx="168" cy="268" rx="8"  ry="5"  fill="#2a2a2a"/>
-        <ellipse cx="215" cy="248" rx="4"  ry="3"  fill="#5a5a5a"/>
-        <ellipse cx="183" cy="228" rx="3"  ry="2.5" fill="#5a5a5a"/>
-        <ellipse cx="236" cy="270" rx="4"  ry="3"  fill="#5a5a5a"/>
-        <ellipse cx="168" cy="268" rx="3"  ry="2.5" fill="#5a5a5a"/>
+        <!-- Base impasto (dentro al cornicione) -->
+        <circle cx="200" cy="230" r="144" fill="url(#doughGrad)"/>
 
-        <!-- Pomodorini -->
-        <circle cx="242" cy="232" r="10" fill="#c41e24"/>
-        <circle cx="170" cy="250" r="9"  fill="#c41e24"/>
-        <circle cx="210" cy="268" r="8"  fill="#d42020"/>
-        <circle cx="240" cy="229" r="4"  fill="#e84040" opacity="0.5"/>
-        <circle cx="168" cy="247" r="3"  fill="#e84040" opacity="0.5"/>
+        <!-- Salsa pomodoro (non copre tutto – lascia crosta visibile) -->
+        <circle cx="200" cy="225" r="122" fill="url(#sauceGrad)"/>
+        <!-- texture salsa: striature radiali leggere -->
+        <circle cx="200" cy="225" r="122" fill="none" stroke="#aa2010" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.25"/>
 
-        <!-- Foglie di basilico -->
-        <path d="M188,210 C183,202 192,196 196,205 C200,196 208,201 203,210 C198,214 190,214 188,210 Z" fill="#2e7d32"/>
-        <path d="M188,210 C191,207 196,207 198,210" fill="none" stroke="#1b5e20" stroke-width="0.8"/>
-        <path d="M226,240 C221,232 230,226 234,235 C238,226 246,231 241,240 C236,244 228,244 226,240 Z" fill="#388e3c"/>
-        <path d="M226,240 C229,237 234,237 236,240" fill="none" stroke="#2e7d32" stroke-width="0.8"/>
-        <path d="M195,272 C191,265 198,260 202,268 C205,260 212,264 208,272 C204,276 197,276 195,272 Z" fill="#2e7d32"/>
+        <!-- ── MOZZARELLA (fiordilatte fonduto, organico, con bruciature) ── -->
+        <!-- blob principale centro-alto -->
+        <ellipse cx="198" cy="205" rx="38" ry="30" fill="url(#mozz1)" transform="rotate(-15,198,205)"/>
+        <ellipse cx="197" cy="204" rx="22" ry="14" fill="#fff9ec" opacity="0.6" transform="rotate(-15,197,204)"/>
+        <!-- bruciatura su questo blob -->
+        <ellipse cx="205" cy="192" rx="10" ry="6" fill="#c08020" opacity="0.45" transform="rotate(-10,205,192)"/>
 
-        <!-- Bolle cottura -->
-        <circle cx="225" cy="235" r="7" fill="#c4870a" opacity="0.6"/>
-        <circle cx="177" cy="245" r="5" fill="#c4870a" opacity="0.5"/>
-        <circle cx="210" cy="258" r="6" fill="#b8780a" opacity="0.5"/>
-        <circle cx="248" cy="246" r="4" fill="#c4870a" opacity="0.4"/>
+        <!-- blob destra -->
+        <ellipse cx="248" cy="242" rx="34" ry="26" fill="url(#mozz2)" transform="rotate(20,248,242)"/>
+        <ellipse cx="247" cy="241" rx="18" ry="12" fill="#fff9ec" opacity="0.55" transform="rotate(20,247,241)"/>
+        <ellipse cx="258" cy="232" rx="9" ry="5" fill="#c08020" opacity="0.4" transform="rotate(15,258,232)"/>
 
+        <!-- blob sinistra -->
+        <ellipse cx="155" cy="248" rx="30" ry="24" fill="url(#mozz3)" transform="rotate(-25,155,248)"/>
+        <ellipse cx="154" cy="247" rx="16" ry="10" fill="#fff9ec" opacity="0.55" transform="rotate(-25,154,247)"/>
+        <ellipse cx="148" cy="240" rx="8" ry="5" fill="#b87820" opacity="0.4" transform="rotate(-20,148,240)"/>
+
+        <!-- blob basso-centro -->
+        <ellipse cx="213" cy="275" rx="26" ry="20" fill="url(#mozz1)" transform="rotate(10,213,275)"/>
+        <ellipse cx="213" cy="274" rx="14" ry="9" fill="#fff9ec" opacity="0.5" transform="rotate(10,213,274)"/>
+        <ellipse cx="220" cy="266" rx="7" ry="4" fill="#c07818" opacity="0.35" transform="rotate(8,220,266)"/>
+
+        <!-- blob sinistra-alta -->
+        <ellipse cx="172" cy="215" rx="22" ry="17" fill="url(#mozz2)" transform="rotate(5,172,215)"/>
+        <ellipse cx="172" cy="214" rx="12" ry="8"  fill="#fff9ec" opacity="0.5" transform="rotate(5,172,214)"/>
+
+        <!-- blob piccolo -->
+        <ellipse cx="232" cy="207" rx="16" ry="12" fill="url(#mozz3)" transform="rotate(-8,232,207)"/>
+        <ellipse cx="165" cy="258" rx="13" ry="10" fill="url(#mozz1)" transform="rotate(12,165,258)"/>
+
+        <!-- ── POMODORINI (ciliegini) ── -->
+        <radialGradient id="tomGrad" cx="35%" cy="30%" r="65%" gradientUnits="objectBoundingBox">
+          <stop offset="0%"  stop-color="#ff6060"/>
+          <stop offset="60%" stop-color="#cc1e1e"/>
+          <stop offset="100%" stop-color="#8c0e0e"/>
+        </radialGradient>
+        <circle cx="244" cy="228" r="13" fill="url(#tomGrad)"/>
+        <ellipse cx="241" cy="224" rx="4" ry="3" fill="#ff9090" opacity="0.5"/>
+        <circle cx="169" cy="252" r="11" fill="url(#tomGrad)"/>
+        <ellipse cx="166" cy="249" rx="3" ry="2" fill="#ff9090" opacity="0.5"/>
+        <circle cx="212" cy="270" r="10" fill="url(#tomGrad)"/>
+        <ellipse cx="209" cy="267" rx="3" ry="2" fill="#ff9090" opacity="0.4"/>
+        <!-- picciolo pomodorini -->
+        <path d="M244,215 L244,218" stroke="#2e7d32" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M169,241 L169,244" stroke="#2e7d32" stroke-width="1.5" stroke-linecap="round"/>
+
+        <!-- ── OLIVE ── -->
+        <ellipse cx="218" cy="250" rx="11" ry="7" fill="#1e1e1e"/>
+        <ellipse cx="185" cy="230" rx="10" ry="6.5" fill="#1e1e1e"/>
+        <ellipse cx="237" cy="268" rx="11" ry="7" fill="#1e1e1e"/>
+        <ellipse cx="170" cy="270" rx="10" ry="6.5" fill="#1e1e1e"/>
+        <!-- foro olive -->
+        <ellipse cx="218" cy="250" rx="4.5" ry="3" fill="#4a3a2a"/>
+        <ellipse cx="185" cy="230" rx="4"   ry="2.5" fill="#4a3a2a"/>
+        <ellipse cx="237" cy="268" rx="4.5" ry="3" fill="#4a3a2a"/>
+        <ellipse cx="170" cy="270" rx="4"   ry="2.5" fill="#4a3a2a"/>
+        <!-- luccichio olive -->
+        <ellipse cx="215" cy="247" rx="2" ry="1.5" fill="#888" opacity="0.5"/>
+        <ellipse cx="182" cy="227" rx="2" ry="1.5" fill="#888" opacity="0.5"/>
+
+        <!-- ── BASILICO ── -->
+        <!-- foglia 1 -->
+        <path d="M186,202 C180,193 190,185 195,196 C200,186 210,192 205,202 C200,208 188,208 186,202 Z" fill="#2e7d32"/>
+        <path d="M186,202 C189,198 196,197 200,202" fill="none" stroke="#1b5e20" stroke-width="1"/>
+        <!-- foglia 2 -->
+        <path d="M224,235 C218,226 229,218 233,229 C238,220 247,226 242,236 C237,241 226,241 224,235 Z" fill="#388e3c"/>
+        <path d="M224,235 C227,231 233,231 236,235" fill="none" stroke="#2e7d32" stroke-width="1"/>
+        <!-- foglia 3 -->
+        <path d="M194,267 C189,259 198,253 202,262 C206,253 214,258 210,267 C206,272 196,272 194,267 Z" fill="#2e7d32"/>
+        <path d="M194,267 C197,263 203,263 206,267" fill="none" stroke="#1b5e20" stroke-width="0.8"/>
+
+        <!-- ── BOLLICINE COTTURA / BRUCIATURE SUPERFICIE ── -->
+        <circle cx="228" cy="238" r="8" fill="#c4870a" opacity="0.55" filter="url(#heatGlow)"/>
+        <circle cx="180" cy="248" r="6" fill="#c07010" opacity="0.5"/>
+        <circle cx="213" cy="260" r="7" fill="#b86808" opacity="0.45"/>
+        <circle cx="250" cy="252" r="5" fill="#c4870a" opacity="0.4"/>
+        <circle cx="160" cy="232" r="4" fill="#b06010" opacity="0.4"/>
+        <circle cx="240" cy="215" r="4" fill="#c07810" opacity="0.35"/>
+        <!-- piccole bolle carbone -->
+        <circle cx="195" cy="242" r="3" fill="#6b3808" opacity="0.5"/>
+        <circle cx="225" cy="255" r="2.5" fill="#6b3808" opacity="0.45"/>
+        <circle cx="172" cy="270" r="2.5" fill="#6b3808" opacity="0.4"/>
+
+      </svg>
+    </div>
+
+    <!-- LAYER FORNO ANTERIORE: maschera SVG identica al forno, copre la pizza quando entra -->
+    <div class="oven-front" id="oven-front" aria-hidden="true">
+      <svg class="oven-mask-svg" viewBox="0 0 700 560" xmlns="http://www.w3.org/2000/svg">
+        <!-- Riproduce esattamente corpo + cupola del forno davanti alla pizza,
+             usando fill identici così la pizza "entra dentro" senza discontinuità visiva -->
+        <!-- Corpo principale forno (parte bassa) -->
+        <rect x="70" y="290" width="560" height="230" rx="12" fill="#252525"/>
+        <!-- Piano forno (soglia) -->
+        <rect x="160" y="288" width="380" height="12" rx="4" fill="#3a3a3a"/>
+        <rect x="160" y="288" width="380" height="3" rx="2" fill="#D4A847" opacity="0.4"/>
+        <!-- Cupola del forno (i lati) — lascia solo il lato destro e sinistro, non il centro -->
+        <!-- Ala sinistra cupola: da x=70 fino alla bocca x=180 -->
+        <path d="M70,290 L180,290 Q180,168 350,168 Q350,168 350,80 Q100,80 100,292 Z" fill="#252525"/>
+        <!-- Ala destra cupola: da x=520 fino a x=630 -->
+        <path d="M630,290 L520,290 Q520,168 350,168 Q350,168 350,80 Q600,80 600,292 Z" fill="#252525"/>
+        <!-- Gambe forno -->
+        <rect x="140" y="490" width="40" height="65" rx="6" fill="#1e1e1e"/>
+        <rect x="520" y="490" width="40" height="65" rx="6" fill="#1e1e1e"/>
+        <!-- Bordo oro cupola (parte esterna, sopra la pizza) -->
+        <path d="M100,292 Q100,80 350,80 Q600,80 600,292" fill="none" stroke="#D4A847" stroke-width="3" opacity="0.8"/>
+        <!-- Bordo oro bocca forno -->
+        <path d="M180,292 Q180,168 350,168 Q520,168 520,292" fill="none" stroke="#D4A847" stroke-width="2.5" opacity="0.6"/>
       </svg>
     </div>
   </div>
@@ -496,7 +662,7 @@
     <div class="dove-grid">
       <div class="dove-map reveal">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.1456789!2d11.2743!3d44.4737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI4JzI1LjMiTiAxMcKwMTYnMjcuNSJF!5e0!3m2!1sit!2sit!4v1680000000000!5m2!1sit!2sit"
+          src="https://maps.google.com/maps?q=44.4667685,11.2705434&z=17&ie=UTF8&iwloc=&output=embed"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"

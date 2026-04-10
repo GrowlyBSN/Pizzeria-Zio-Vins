@@ -49,70 +49,80 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollTrigger: {
           trigger: '#hero',
           start:   'top top',
-          end:     '+=120%',
+          end:     '+=130%',
           pin:     true,
           scrub:   1.5,
           anticipatePin: 1
         }
       });
 
-      // Pizza peel rises and shrinks into the oven
+      /*
+       * La pizza sale verso la bocca del forno e si rimpicciolisce.
+       * La scomparsa visiva è gestita dallo z-index: il layer .oven-front
+       * (z-index 6) è davanti alla pizza (z-index 5), quindi quando la pizza
+       * entra nell'area del forno viene mascherata — senza bisogno di opacity.
+       * Usiamo opacity solo nell'ultimo 10% del percorso per gestire
+       * eventuali eccedenze oltre la bocca.
+       */
       tl.to('#hero-pizza-group', {
-        y:       '-35vh',
-        scale:   0.28,
-        opacity: 0,
-        ease:    'power2.in'
+        y:       '-42vh',   /* sale fino dentro la bocca del forno */
+        scale:   0.22,      /* rimpicciolisce come in prospettiva */
+        opacity: 0,         /* svanisce completamente una volta dentro */
+        ease:    'power2.inOut'
       }, 0);
 
-      // Oven glows brighter
+      // Bagliore forno si intensifica man mano che la pizza entra
       var ovenGlow = document.getElementById('oven-glow');
       if (ovenGlow) {
         tl.to('#oven-glow', {
-          opacity: 1,
-          ease:    'power1.inOut'
+          opacity:  1,
+          attr:     { rx: 180, ry: 145 },
+          ease:     'power1.inOut'
         }, 0);
       }
 
-      // Oven flames intensify
+      // Fiamme si alzano
       var ovenFlames = document.querySelectorAll('.oven-flames');
       if (ovenFlames.length) {
         tl.to('.oven-flames', {
-          opacity: 0.9,
-          ease:    'power1.inOut'
+          opacity:   1,
+          scaleY:    1.4,
+          transformOrigin: 'bottom center',
+          ease:      'power1.inOut'
         }, 0);
       }
 
-      // Hero text fades up and out
+      // Testo hero sparisce verso l'alto
       var heroText = document.getElementById('hero-text');
       if (heroText) {
         tl.to('#hero-text', {
           opacity:  0,
-          y:        -40,
-          duration: 0.4,
+          y:        -50,
           ease:     'power2.in'
         }, 0);
       }
 
     } else {
-      // Mobile: simple fade on scroll
+      // Mobile: semplice fade con piccolo movimento
       var simpleTl = gsap.timeline({
         scrollTrigger: {
           trigger: '#hero',
           start:   'top top',
-          end:     '+=60%',
+          end:     '+=70%',
           scrub:   1
         }
       });
 
       simpleTl.to('#hero-pizza-group', {
-        y:       '-15vh',
+        y:       '-20vh',
+        scale:   0.5,
         opacity: 0,
         ease:    'power1.in'
       }, 0);
 
       simpleTl.to('#hero-text', {
         opacity: 0,
-        y:       -20,
+        y:       -25,
         ease:    'power1.in'
       }, 0);
     }
